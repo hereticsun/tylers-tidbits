@@ -1,24 +1,50 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  font-family: "Proxima-Nova", sans-serif;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #a8d8d8;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.App-header header {
+    background: url('../../assets/img/shared/sign.svg') center center no-repeat;
+    height: 260px;
+    padding-top: 1px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h1 {
+    font-family: "reklame-script", sans-serif;
+    font-weight: 700;
+    font-size: 3.998rem;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    color: #a8d8d8;
+}
+
+.search-bar {
+    margin: 20px 0;
+}
+
+.restaurant-list {
+    display: block;
+}
+
+.restaurant-item {
+    display: block;
+}
+
+.restaurant-item h3 {
+    display: inline-block;
+}
+
+.restaurant-item ul {
+    display: inline-block;
+}
+
+.restaurant-item li {
+    display: inline-block;
+    margin-right: 20px;
 }
