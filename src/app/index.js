@@ -7,6 +7,7 @@ import './index.css';
 
 import App from './base/App';
 import PageHome from './modules/pages/page-home/page-home';
+import PageRestaurants from './modules/pages/page-restaurants/page-restaurants';
 
 const store = configureStore();
 
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={PageHome} />
+        <Route path="restaurants" component={PageRestaurants} />
       </Route>
     </Router>
   </Provider>,

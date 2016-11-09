@@ -15,7 +15,7 @@ class SearchBar extends Component {
         return(
             <div className="search-bar">
                 <label >Search for a lunch venue</label>
-                <input id="search" name="search" onChange={event => this.onInputChange(event.target.value)} />
+                <input id="search" className="search-bar__input" name="search" onChange={event => this.onInputChange(event.target.value)} />
             </div>
         );
     }

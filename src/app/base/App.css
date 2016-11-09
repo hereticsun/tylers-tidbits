@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "Proxima-Nova", sans-serif;
+  padding-bottom: 87px;
 }
 
 .App-header {
@@ -35,11 +36,16 @@ nav > ul {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    padding: 0 20px;
 }
 
 nav > ul > li {
     display: block;
     flex-basis: 25%;
+}
+
+.nav-bar__nav-icon {
+    max-height: 30px;
 }
 
 .nav-bar a {
@@ -51,8 +57,18 @@ nav > ul > li {
     margin: 20px 0;
 }
 
+.search-bar__input {
+    font-size: 1.999rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
 .restaurant-list {
     display: block;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .restaurant-item {
