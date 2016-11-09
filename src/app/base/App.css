@@ -24,6 +24,29 @@ h1 {
     color: #a8d8d8;
 }
 
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #271621;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+nav > ul > li {
+    display: block;
+    flex-basis: 25%;
+}
+
+.nav-bar a {
+    color: #a8d8d8;
+    text-decoration: none;
+}
+
 .search-bar {
     margin: 20px 0;
 }

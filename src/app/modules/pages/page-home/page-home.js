@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as Actions from './page-home.actions';
 import SearchBar from './search-bar/search-bar';
+import NavBar from '../../common/navbar/navbar';
 import RestaurantList from './restaurant-list/restaurant-list';
 
 class PageHome extends Component {
@@ -45,7 +46,7 @@ class PageHome extends Component {
             console.log("Error: " +error.code);
         });
  */
-
+        this.props.actions.searchRestaurants(term);
         console.log('Search term: ', term);
    }
 
@@ -57,6 +58,7 @@ class PageHome extends Component {
                         <h1>Tyler&apos;s<br />Tidbits</h1>
                     </header>
                 </div>
+                <NavBar />
                 <SearchBar onTermChange={term => this.handleTermChange(term)} />
                 <RestaurantList restaurants={this.props.restaurants} />
             </div>
