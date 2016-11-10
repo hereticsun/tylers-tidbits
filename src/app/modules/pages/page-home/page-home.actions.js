@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, SEARCH_RESTAURANTS } from './page-home.action-types';
+import { FETCH_RESTAURANTS, SEARCH_RESTAURANTS, FETCH_BY_CATEGORY } from './page-home.action-types';
 import Firebase from 'firebase';
 
 // Initialize Firebase
@@ -16,7 +16,6 @@ export function fetchRestaurants() {
     return function(dispatch) {
         const ref = Firebase.database().ref('restaurants');
         ref.on('value', (snapshot) => {
-            console.log(snapshot.val());
             dispatch({
                 type: FETCH_RESTAURANTS,
                 payload: snapshot.val()
@@ -29,9 +28,21 @@ export function searchRestaurants(term) {
     return function(dispatch) {
         const ref = Firebase.database().ref('restaurants').orderByChild('name').equalTo(term);
         ref.on("value", (snapshot) => {
-            console.log('Firebase Snapshot', snapshot.val());
             dispatch({
                 type: SEARCH_RESTAURANTS,
+                payload: snapshot.val()
+            })
+        });
+    }
+}
+
+export function fetchByCategory(term) {
+    return function(dispatch) {
+        const ref = Firebase.database().ref('restaurants').orderByChild('category').equalTo(term);
+        ref.on('value', (snapshot) => {
+            console.log('By Category', snapshot.val());
+             dispatch({
+                type: FETCH_BY_CATEGORY,
                 payload: snapshot.val()
             })
         });

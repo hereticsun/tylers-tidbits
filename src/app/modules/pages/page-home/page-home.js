@@ -32,7 +32,8 @@ class PageHome extends Component {
             url: 'http://www.wrapitup.co.uk/about-us/locations/'
         });
 */
-        this.props.actions.fetchRestaurants();
+//         this.props.actions.fetchRestaurants();
+        this.props.actions.fetchByCategory('asian');
     }
 
     handleTermChange(term) {
