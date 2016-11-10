@@ -6,7 +6,6 @@ import * as Actions from './page-home.actions';
 import SearchBar from './search-bar/search-bar';
 import NavBar from '../../common/navbar/navbar';
 import CategoryList from './category-list/category-list';
-import RestaurantList from './restaurant-list/restaurant-list';
 
 class PageHome extends Component {
     componentWillMount() {
@@ -34,7 +33,8 @@ class PageHome extends Component {
         });
 */
 //         this.props.actions.fetchRestaurants();
-        this.props.actions.fetchByCategory('asian');
+//         this.props.actions.fetchByCategory('asian');
+        this.props.actions.clearRestaurants();
     }
 
     handleTermChange(term) {
@@ -63,7 +63,6 @@ class PageHome extends Component {
                 <NavBar />
                 <SearchBar onTermChange={term => this.handleTermChange(term)} />
                 <CategoryList />
-                <RestaurantList restaurants={this.props.restaurants} />
             </div>
         );
     }
