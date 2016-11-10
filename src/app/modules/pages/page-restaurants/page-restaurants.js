@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import * as Actions from '../page-home/page-home.actions';
 import NavBar from '../../common/navbar/navbar';
 import RestaurantList from '../page-home/restaurant-list/restaurant-list';
+import logo from '../../../../assets/img/shared/logo.svg';
+
 
 class PageRestaurants extends Component {
     componentWillMount() {
@@ -15,9 +17,7 @@ class PageRestaurants extends Component {
         return(
             <div>
                 <div className="App-header">
-                    <header>
-                        <h1>Tyler&apos;s<br />Tidbits</h1>
-                    </header>
+                    <h5 className="App-header__site-name"><img src={logo} className="App-header__logo" alt="Tyler's Tidbits" /></h5>
                 </div>
                 <NavBar />
                 <RestaurantList restaurants={this.props.restaurants} />

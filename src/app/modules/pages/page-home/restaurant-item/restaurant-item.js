@@ -7,7 +7,7 @@ const RestaurantItem = (restaurant) => {
         <h3>{r.name}</h3>
         <ul>
             <li>{r.stars} Stars</li>
-            <li>{r.walking}mins to walk</li>
+            <li>{r.walking} mins to walk</li>
         </ul>
 
     </li>
