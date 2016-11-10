@@ -18,7 +18,7 @@ class NavBar extends Component {
                 <ul>
                     <li><Link to="/" title="Home"><img src={logoHome} className="nav-bar__nav-icon" alt="Home" />Home</Link></li>
                     <li><Link to="/restaurants" title="Restaurants"><img src={logoRestaurants} className="nav-bar__nav-icon" alt="Restaurants" />Restaurants</Link></li>
-                    <li><Link to="/" title="Search"><img src={logoSearch} className="nav-bar__nav-icon" alt="Search" />Search</Link></li>
+                    <li><Link to="/search" title="Search"><img src={logoSearch} className="nav-bar__nav-icon" alt="Search" />Search</Link></li>
                     <li><Link to="/" title="Add"><img src={logoAdd} className="nav-bar__nav-icon" alt="Add" />Add</Link></li>
                 </ul>
             </nav>
