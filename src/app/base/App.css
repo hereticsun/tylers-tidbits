@@ -86,7 +86,6 @@ nav > ul > li {
     display: block;
     flex: calc(50% - 5px) 0 1;
     text-align: center;
-    border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -96,7 +95,7 @@ nav > ul > li {
 .category-list__category:first-of-type{
     background-image: url('../../assets/img/asian.svg');
     background-size: contain;
-    background-position: right 10px center;
+    background-position: right -12px center;
     background-repeat: no-repeat;
 }
 
