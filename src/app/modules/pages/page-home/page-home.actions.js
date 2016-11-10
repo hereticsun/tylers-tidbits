@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, SEARCH_RESTAURANTS, FETCH_BY_CATEGORY } from './page-home.action-types';
+import { CLEAR_RESTAURANTS, FETCH_RESTAURANTS, SEARCH_RESTAURANTS, FETCH_BY_CATEGORY } from './page-home.action-types';
 import Firebase from 'firebase';
 
 // Initialize Firebase
@@ -11,6 +11,14 @@ const config = {
 };
 
 Firebase.initializeApp(config);
+
+export function clearRestaurants() {
+    return function(dispatch) {
+        dispatch({
+            type: CLEAR_RESTAURANTS
+        });
+    }
+}
 
 export function fetchRestaurants() {
     return function(dispatch) {
