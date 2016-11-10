@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as Actions from '../page-home/page-home.actions';
 import NavBar from '../../common/navbar/navbar';
-import RestaurantList from '../page-home/restaurant-list/restaurant-list';
+import RestaurantList from '../../common/restaurant-list/restaurant-list';
 import logo from '../../../../assets/img/shared/logo.svg';
 
 
