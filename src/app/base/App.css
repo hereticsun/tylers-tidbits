@@ -73,6 +73,42 @@ nav > ul > li {
     text-align: center;
 }
 
+.category-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    padding: 0;
+    margin: 0 20px;
+}
+
+.category-list__category {
+    display: block;
+    flex: calc(50% - 5px) 0 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #a8d8d8;
+}
+
+.category-list__category:first-of-type{
+    background-image: url('../../assets/img/asian.svg');
+    background-size: contain;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+
+.category-list__category > a {
+    padding: 20px;
+    display: block;
+    color: #271621;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: left;
+}
+
 .restaurant-list {
     display: block;
     padding: 0 20px;
